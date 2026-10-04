@@ -1,0 +1,103 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "EtherTransfer_NoEtherSent",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "EtherTransfer__InvalidRecipient",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "EtherTransfer__TransferFailed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "EtherTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "transferEther",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EtherTransfer.sol": "EtherTransfer"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EtherTransfer.sol": {
+			"keccak256": "0x51c51a2028dcb6589b294c27e5a78865db8681bac0e77b92c45d54f25650667d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c1a18f5c15074610468713962b3b79cee014caf0d167e333ef91fde04337a614",
+				"dweb:/ipfs/QmfUAp2XfgctwT2urp7Wo9Cd6qHEVexa43NgA1VuSCnE46"
+			]
+		}
+	},
+	"version": 1
+}

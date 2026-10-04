@@ -1,0 +1,10 @@
+{
+  "contracts/EtherTransfer.sol": {
+    "__sources__": {
+      "contracts/EtherTransfer.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.34;\n\ncontract EtherTransfer {\n    error EtherTransfer_NoEtherSent();\n    error EtherTransfer__InvalidRecipient();\n    error EtherTransfer__TransferFailed();\n\n    // Event emitted when Ether is transferred\n    event EtherTransferred(\n        address indexed from,\n        address indexed to,\n        uint256 amount\n    );\n\n    // Transfer Ether to a recipient address\n    function transferEther(address payable _recipient) public payable {\n        if (msg.value <= 0) revert EtherTransfer_NoEtherSent();\n        if (_recipient == address(0)) revert EtherTransfer__InvalidRecipient();\n\n        (bool success, ) = _recipient.call{value: msg.value}(\"\");\n        if (success) revert EtherTransfer__TransferFailed();\n\n        emit EtherTransferred(msg.sender, _recipient, msg.value);\n    }\n\n    // Fallback function to receive Ether directly\n    receive() external payable {}\n}\n",
+        "file": "contracts/EtherTransfer.sol"
+      }
+    }
+  }
+}
